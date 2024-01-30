@@ -1,0 +1,49 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --dark: #1e2226;
+    --gray: #fafafa;
+    --text-dark: rgba(0, 0, 0, 0.8);
+    --bg-dark: #0d1c2d;
+    --bg: transparent;
+    --light: #E0EDFF;
+    --dark-light: #15283E;
+    --light-thin: #F6F9FB;
+    --left: 1px;
+    --switch: #FF9700;
+    --text-header: #474f58;
+    --comment: #D9D9D9;
+    --icon: 1;
+
+    
+    --login-bg: url('../img/svg/login-bg.svg');
+    --logo: url('../img/svg/logo.svg');
+    --service-bg-img: url('../img/png/service-bg.png');
+    --education-bg-img: url('../img/png/shadow.png');
+    --user: url('../img/svg/user-white.svg');
+}
+
+:root[date-theme = 'dark'] {
+    --white: #0D0D0D;
+    --black: #D9DCE1;
+    --dark: #D9DCE1;
+    --gray: #121212;
+    --text-dark: rgba(255, 255, 255, 0.80);
+    --bg-dark: #0D0D0D;
+    --service-bg-img: none;
+    --education-bg-img: none;
+    --bg: #0D0D0D;
+    --light: #001738;
+    --dark-light: #C1D4EA;
+    --switch: #15283E;
+    --light-thin: #001738;
+    --comment: #001738;
+    --left: 42px;
+    --text-header: #fff;
+    --icon: 0.8;
+
+    
+    --login-bg: url('../img/svg/login-bg-dark.svg');
+    --logo: url('../img/svg/logo-footer.svg');
+    --user: url('../img/svg/user-black.svg');
+}

@@ -92,10 +92,3 @@ function moveRight() {
     }
 
 }
-
-const infoFaqBtn = document.querySelector('.sub-info__btn');
-const sub_info = document.querySelector('.sub-info');
-
-infoFaqBtn.addEventListener('click', () => {
-    sub_info.classList.toggle('showSubInfo')
-});

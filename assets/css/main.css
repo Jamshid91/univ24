@@ -219,7 +219,7 @@ body {
   position: absolute;
   width: 105%;
   height: 105%;
-  top: -2px;
+  top: -1px;
   left: -1px;
 }
 
@@ -988,6 +988,10 @@ button {
   padding: 0 10px;
   text-align: center;
   margin: 20px 0;
+}
+
+.header-login-active .admin-panel .subscribe-training svg g circle {
+  stroke: var(--white);
 }
 
 .header-login-active .admin-panel .subscribe-training img {
@@ -2230,8 +2234,12 @@ button {
   margin-bottom: 24px;
 }
 
-.info-text span {
+.info-text a {
   color: #0094ff;
+}
+
+.info-text a:hover {
+  opacity: 0.8;
 }
 
 .media-in__photo,
@@ -2296,6 +2304,10 @@ button {
      object-fit: cover;
 }
 
+.media-in .sub-info {
+  top: -25px !important;
+}
+
 .magazine-in {
   margin-bottom: 50px;
 }
@@ -2317,6 +2329,10 @@ button {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.magazine-in .sub-info {
+  top: -25px !important;
 }
 
 .magazine-in .date {
@@ -2617,11 +2633,19 @@ button {
   position: relative !important;
   width: auto;
   height: auto;
+  padding-bottom: 2px;
+  height: 36px;
 }
 
 .swiper-btns .prev::after,
 .swiper-btns .next::after {
   display: none;
+}
+
+.swiper-btns .prev svg,
+.swiper-btns .next svg {
+  width: 36px;
+  height: 36px;
 }
 
 .swiper-btns .prev svg path,
@@ -3224,6 +3248,10 @@ button {
   width: 28px;
   height: 28px;
   margin-right: 10px;
+}
+
+.subscribe-training svg g circle {
+  stroke: var(--white);
 }
 
 .subscribe-training .faq-info {
@@ -4051,11 +4079,18 @@ button {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 2;
+  height: 36px;
 }
 
 .swiper-media .swiper-btns .prev:hover svg path,
 .swiper-media .swiper-btns .next:hover svg path {
   fill: #ff9700;
+}
+
+.swiper-media .swiper-btns .prev svg,
+.swiper-media .swiper-btns .next svg {
+  width: 36px;
+  height: 36px;
 }
 
 .swiper-media .swiper-btns .prev svg path,
@@ -5006,8 +5041,12 @@ button {
   margin-top: 24px;
 }
 
-.info-page .info__text span {
+.info-page .info__text a {
   color: #0094FF;
+}
+
+.info-page .info__text a:hover {
+  opacity: 0.8;
 }
 
 .info-page .info__img {
@@ -5473,6 +5512,7 @@ button {
 .info-page .slider-btns button.prev-btn,
 .info-page .slider-btns button.next-btn {
   background: transparent;
+  height: 36px;
 }
 
 .info-page .slider-btns button.prev-btn svg path,
@@ -5499,7 +5539,7 @@ button {
   position: absolute;
   width: 100%;
   left: 0;
-  top: 100%;
+  top: 0;
   z-index: 10;
   max-height: 0;
   overflow: hidden;

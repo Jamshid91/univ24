@@ -41,7 +41,7 @@ body {
     position: absolute;
     width: 105%;
     height: 105%;
-    top: -2px;
+    top: -1px;
     left: -1px;
   }
   .user-icon {
@@ -606,6 +606,11 @@ button {
       padding: 0 10px;
       text-align: center;
       margin: 20px 0;
+      svg {
+       g circle {
+          stroke: var(--white)
+        }
+      }
       img {
         width: 28px;
         height: 28px;
@@ -1530,8 +1535,11 @@ button {
   line-height: 19px;
   color: var(--text-dark);
   margin-bottom: 24px;
-  span {
+  a {
     color: #0094ff;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -1584,6 +1592,11 @@ button {
     }
   }
 }
+.media-in {
+  .sub-info {
+    top: -25px !important;
+  }
+}
 
 .magazine-in {
   margin-bottom: 50px;
@@ -1600,6 +1613,10 @@ button {
         object-fit: cover;
       }
     }
+  }
+
+  .sub-info {
+    top: -25px !important;
   }
 
   .date {
@@ -1821,11 +1838,17 @@ button {
     position: relative !important;
     width: auto;
     height: auto;
+    padding-bottom: 2px;
+    height: 36px;
     &::after {
       display: none;
     }
-    svg path {
-      fill: var(--slider-btn);
+    svg  {
+      width: 36px;
+      height: 36px;
+      path {
+        fill: var(--slider-btn);
+      }
     }
   }
   .prev {
@@ -2299,6 +2322,11 @@ button {
     width: 28px;
     height: 28px;
     margin-right: 10px;
+  }
+  svg {
+   g circle {
+      stroke: var(--white)
+    }
   }
   .faq-info {
     margin: 0;
@@ -2897,11 +2925,16 @@ button {
       top: 50%;
       transform: translateY(-50%);
       z-index: 2;
+      height: 36px;
       &:hover svg path {
         fill: #ff9700;
       }
-      svg path {
-        fill: var(--slider-btn);
+      svg  {
+        width: 36px;
+        height: 36px;
+        path {
+          fill: var(--slider-btn);
+        }
       }
     }
     .prev {
@@ -3622,8 +3655,11 @@ button {
     line-height: 20px;
     color: var(--black);
     margin-top: 24px;
-    span {
+    a {
       color: #0094FF;
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
   .info__img {
@@ -3965,6 +4001,7 @@ button {
     button.prev-btn,
     button.next-btn {
       background: transparent;
+      height: 36px;
       svg path {
         fill: var(--slider-btn);
       }
@@ -3988,7 +4025,7 @@ button {
   position: absolute;
   width: 100%;
   left: 0;
-  top: 100%;
+  top: 0;
   z-index: 10;
   max-height: 0;
   overflow: hidden;

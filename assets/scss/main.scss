@@ -158,7 +158,7 @@ button {
 
 .blog {
   border-radius: 20px;
-  background: var(--white);
+  background: var(--white2);
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
   padding: 20px 30px;
   margin-bottom: 24px;
@@ -211,6 +211,9 @@ button {
     color: var(--text-header);
     font-size: 10px;
     line-height: 13px;
+    svg path{
+      fill: var(--black);
+    }
   }
   a:hover {
     span {
@@ -263,7 +266,6 @@ button {
     }
   }
   &-lang {
-    text-transform: uppercase;
     &-btn {
       cursor: pointer;
       .lang-active {
@@ -283,6 +285,7 @@ button {
         margin-right: 10px;
         position: relative;
         color: var(--white);
+        text-transform: uppercase;
         &::before {
           content: "";
           position: absolute;
@@ -327,6 +330,86 @@ button {
         }
       }
     }
+
+    .all-language {
+      position: absolute;
+      top: 110%;
+      right: 0;
+      background: var(--white);
+      width: 375px;
+      z-index: 60;
+      animation: animShowLang .3s;
+      border-radius: 10px;
+      display: none;
+      &__title {
+        font-size: 11px;
+        line-height: 13px;
+        color: var(--dark);
+        margin-bottom: 6px;
+        font-weight: 400;
+      }
+      &-item {
+        box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        background: var(--white);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      &-list {
+        max-height: 350px;
+        overflow: hidden;
+        padding: 8px 0;
+        li {
+          padding-left: 16px;
+          a {
+            display: flex;
+            align-items: center;
+            height: 25px;
+            border-bottom: 1px solid var(--gray2);
+            font-size: 11px;
+            line-height: 13px;
+            color: var(--dark);
+          }
+          &:hover {
+            background: var(--gray2);
+          }
+        }
+      }
+      &-btn {
+        width: 100%;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background: var(--white);
+        margin-top: 5px;
+        &:hover {
+          background: var(--slider-btn);
+        }
+      }
+      .showAllList {
+        max-height: 2000px;
+        padding-bottom: 0;
+      }
+      .rortateBtn {
+        margin-top: 0 !important;
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    @keyframes animShowLang {
+      from {
+        top: 85%;
+      } to {
+        top: 110%;
+      }
+    }
+  }
+  .showLang {
+    .all-language {
+      display: block;
+    }
   }
   .container {
     position: relative;
@@ -336,15 +419,22 @@ button {
   }
 }
 
+.active-login {
+  padding-bottom: 40px;
+  .header-logo {
+    left: 15px;
+    top: 20px;
+  }
+}
+
 .header-login-active {
   background-size: cover;
   background-repeat: no-repeat;
-  // background-position: 0 -15px;
   position: absolute;
   right: 20px;
   top: 0;
   padding-top: 25px;
-  padding-right: 15px;
+  padding: 25px 15px 0 25px;
   z-index: 20;
   width: 453px;
   transition: .1s all;
@@ -360,6 +450,7 @@ button {
       background: #0094FF;
       cursor: pointer;
       position: relative;
+      display: none;
       .chat-count {
         min-width: 14px;
         height: 14px;
@@ -380,6 +471,7 @@ button {
     }
     .header-login-btn {
       padding-right: 20px;
+      margin-left: auto;
     }
   }
   .admin-panel {
@@ -611,6 +703,9 @@ button {
 .showLogin {
   background-image: var(--login-bg);
   z-index: 200;
+  .chat-btn {
+    display: flex !important;
+  }
   .admin-panel {
     display: block;
   }
@@ -818,7 +913,7 @@ button {
     width: 67px;
     height: 67px;
     border-radius: 50%;
-    background: var(--white);
+    background: #fff;
     position: relative;
     margin: 0 !important;
     transform: translate(-50%, -50%);
@@ -860,7 +955,7 @@ button {
 }
 
 .service-blog {
-  background: var(--bg);
+  background: var(--white2);
   background-image: var(--service-bg-img);
   background-size: cover;
   padding: 24px;
@@ -885,12 +980,17 @@ button {
     padding: 0 10px;
     margin-bottom: 10px;
     margin-right: 12px;
-    img {
-      margin-right: 10px;
+    svg {
+     g circle {
+        stroke: var(--white)
+      }
     }
     .faq-info {
       margin: 0;
       cursor: pointer;
+      svg path {
+        fill: var(--white);
+      }
       &:hover {
         svg path {
           fill-opacity: 1;
@@ -913,7 +1013,11 @@ button {
     justify-content: center;
     color: var(--white);
     font-size: 13px;
+    font-weight: 500;
     line-height: 17px;
+    svg path {
+      fill: var(--white);
+    }
     &:hover {
       opacity: 0.9;
     }
@@ -1046,17 +1150,19 @@ button {
       input {
         width: 100%;
         height: 100%;
-        border: 1px solid #e8effa;
+        border: 1px solid var(--gray);
         border-radius: 10px;
         font-size: 14px;
         line-height: 20px;
         font-weight: 600;
         color: var(--dark-light);
         padding: 0 40px 0 12px;
+        background: var(--white2);
+        color: var(--black);
         &::placeholder {
           font-size: 10px;
           line-height: 14px;
-          color: rgba(0, 0, 0, 0.6);
+          color: var(--black);
         }
         &:focus {
           border-color: #ff9700;
@@ -1073,6 +1179,9 @@ button {
         background: #0085ff;
         svg {
           margin-bottom: 3px;
+          path {
+            fill: var(--white);
+          }
         }
         &:hover {
           opacity: 0.9;
@@ -1168,15 +1277,18 @@ button {
         font-size: 8px;
         font-weight: 600;
         line-height: 8px;
-        color: var(--white);
+        color: var(--white2);
         width: 22px;
         height: 22px;
         border-radius: 50%;
-        background: #e8effa;
+        background: var(--filter);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        svg path {
+          fill: var(--svg);
+        }
       }
       input[type="radio"]:checked ~ span {
         background: #ff9700;
@@ -1205,8 +1317,8 @@ button {
         line-height: 17px;
         font-weight: 500;
         color: #97a3b5;
-        background: #e8effa;
-        border: 1px solid #e8effa;
+        background: var(--filter);
+        border: 1px solid var(--filter);
       }
 
       input[type="radio"]:checked ~ span {
@@ -1285,6 +1397,9 @@ button {
 
 .liked {
   background: var(--white);
+  svg path {
+    stroke: var(--dark);
+  }
 }
 .clickedLike {
   svg {
@@ -1306,11 +1421,17 @@ button {
 .share {
   background: var(--white);
   margin: 0 15px;
+  svg path {
+    fill: var(--dark);
+  }
 }
 .discuss-tg {
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #f4f4f4;
+  border: 1px solid var(--border);
+  svg  g path:last-child {
+    fill: var(--white);
+  }
   span {
     margin: 0 8px;
     font-size: 16px;
@@ -1352,6 +1473,13 @@ button {
       }
     }
   }
+  .controls {
+    width: 100%;
+    .settings-box {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .swiper-media {
@@ -1376,17 +1504,21 @@ button {
   width: 324px;
   height: 54px;
   border-radius: 20px;
-  border: 1px solid #E0EDFF;
+  background: var(--white2);
+  border: 1px solid var(--border);
   padding: 0 19px;
   margin-top: 25px;
   button {
     width: 31px;
     height: 31px;
     border-radius: 50%;
-    background: #E0EDFF;
+    background: var(--button);
     display: flex;
     align-items: center;
     justify-content: center;
+    svg path {
+      fill: var(--dark-light);
+    }
     &:hover svg path {
       fill: #ff9700;
     }
@@ -1416,7 +1548,7 @@ button {
     width: 32.8%;
     padding: 14px 8px;
     border-radius: 16px;
-    background: var(--white);
+    background: var(--white2);
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
     margin-bottom: 12px;
     .date {
@@ -1429,7 +1561,7 @@ button {
       line-height: 19px;
       font-weight: 500;
       color: #ff9700;
-      background: #fff;
+      background: var(--hashteg);
       border-radius: 10px;
       padding: 2px 8px;
     }
@@ -1438,7 +1570,7 @@ button {
       font-size: 18px;
       line-height: 22px;
       font-weight: 600;
-      color: var(--black);
+      color: var(--black2);
       margin: 8px 0 10px;
       &:hover {
         color: #0085ff;
@@ -1474,8 +1606,15 @@ button {
     font-size: 18px;
     line-height: 24px;
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--text-dark);
     margin: 26px 0 24px;
+  }
+  .controls {
+    width: 100%;
+    .settings-box {
+      right: 0;
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -1685,6 +1824,9 @@ button {
     &::after {
       display: none;
     }
+    svg path {
+      fill: var(--slider-btn);
+    }
   }
   .prev {
     margin-right: 18px;
@@ -1866,7 +2008,6 @@ button {
   }
 
   .license-item {
-    background-image: url(../img/png/l1.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 24%;
@@ -1883,19 +2024,24 @@ button {
       font-size: 24px;
       line-height: 29px;
       font-weight: 500;
+      color: var(--dark);
     }
     &__text {
       font-size: 20px;
       line-height: 24px;
+      color: var(--dark);
+    }
+    &:nth-child(1) {
+    background-image: var(--png1);
     }
     &:nth-child(2) {
-      background-image: url(../img/png/l2.png);
+      background-image: var(--png2);
     }
     &:nth-child(3) {
-      background-image: url(../img/png/l3.png);
+      background-image: var(--png3);
     }
     &:nth-child(4) {
-      background-image: url(../img/png/l4.png);
+      background-image: var(--png4);
     }
   }
 }
@@ -1962,6 +2108,14 @@ button {
 
 .faqs {
   margin: 50px 0;
+  &__img {
+    width: 356px;
+    height: 326px;
+    background-image: var(--faq_png);
+    background-size: contain;
+    mix-blend-mode: lighten;
+  }
+
   .faq-item {
     color: var(--dark);
     padding: 10px 0;
@@ -2507,7 +2661,7 @@ button {
         font-size: 18px;
         line-height: 24px;
         font-weight: 700;
-        color: #000;
+        color: var(--black);
         margin-bottom: 24px;
       }
       .change-pass {
@@ -2531,7 +2685,7 @@ button {
         font-size: 16px;
         line-height: 22px;
         font-weight: 500;
-        color: #000;
+        color: var(--black);
         margin-bottom: 12px;
       }
       input {
@@ -2633,6 +2787,7 @@ button {
       font-size: 18px;
       line-height: 24px;
       font-weight: 500;
+      color: var(--black);
     }
 
     
@@ -2745,6 +2900,9 @@ button {
       &:hover svg path {
         fill: #ff9700;
       }
+      svg path {
+        fill: var(--slider-btn);
+      }
     }
     .prev {
       left: 28px;
@@ -2850,9 +3008,18 @@ button {
     background: var(--white);
     margin-bottom: 10px;
     cursor: pointer;
-    margin-bottom: 40px;
+    margin-bottom: 40px;  
+    .controls {
+      width: 100%;
+      .settings-box {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
     &-head {
       padding: 7.5px 12px;
+      position: relative;
+      z-index: 50;
       .arrow {
         transition: .3s all;
         margin-right: 10px;
@@ -3355,10 +3522,12 @@ button {
   }
   .chat-teacher {
     font-family: "Inter", sans-serif;
+    height: 100%;
     &__title {
       font-size: 18px;
       line-height: 21px;
       font-weight: 600;
+      color: var(--black);
     }
     .course-name {
       display: inline-block;
@@ -3372,16 +3541,56 @@ button {
       margin: 14px 0;
     }
     .chat{
-      max-height: 50%;
+      max-height: 350px;
       overflow-y: scroll;
       padding-right: 10px;
       &::-webkit-scrollbar {
         width: 8px;
         border-radius: 4px;
-        background: var(--comment);
+        background: transparent;
       }
       &::-webkit-scrollbar-thumb {
         width: 8px;
+        border-radius: 4px;
+        background: #FF9700;
+      }
+      &-item {
+        margin-bottom: 24px;
+        &__date {
+          font-size: 12px;
+          line-height: 14px;
+          color: var(--text-header);
+        }
+        &__text {
+          margin-top: 16px;
+          color: var(--black);
+        }
+      }
+      .teacher .chat-item__name {
+        color: #FF9700;
+      }
+      .user .chat-item__name {
+        color: #0094FF;
+      }
+    }
+    &-text {
+      width: 100%;
+      height: 49px;
+      border-radius: 10px;
+      color: var(--black);
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 300;
+      padding: 16px 13px;
+      background: var(--light-thin);
+      resize: none;
+      margin-top: 6px;
+      &::-webkit-scrollbar {
+        width: 4px;
+        border-radius: 4px;
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
         border-radius: 4px;
         background: #FF9700;
       }
@@ -3427,7 +3636,6 @@ button {
     border-radius: 20px;
     background: var(--white);
     margin-bottom: 10px;
-    margin-bottom: 40px;
     position: relative;
     z-index: 100;
     &-head {
@@ -3520,17 +3728,17 @@ button {
     }
     
   }
-  .settings-bg {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #0009;
-    z-index: 30;
-  }
 
+}
+.settings-bg {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0009;
+  z-index: 30;
 }
 
 .controls {
@@ -3547,6 +3755,7 @@ button {
     font-size: 10px;
     line-height: 12px;
     font-weight: 500;
+    z-index: 99;
     &__close {
       cursor: pointer;
       &:hover svg path {
@@ -3756,10 +3965,97 @@ button {
     button.prev-btn,
     button.next-btn {
       background: transparent;
+      svg path {
+        fill: var(--slider-btn);
+      }
     }
     button:disabled,
     button[disabled]{
       opacity: 0.3;
+    }
+  }
+}
+
+.sub-info__btn {
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.sub-info {
+  box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  z-index: 10;
+  max-height: 0;
+  overflow: hidden;
+  transition: .3s all;
+  .count {
+    color: var(--black);
+  }
+  .controls {
+    background: var(--info);
+    border-top: 1px solid var(--light);
+    padding: 11px 0;
+    margin-top: 10px;
+    .play-controls {
+      background: var(--info);
+      padding: 0;
+      margin: 0;
+      width: auto;
+      border: none;
+      height: auto;
+      button {
+        margin-right: 60px;
+        &:first-child svg {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+
+.showSubInfo {
+  max-height: 10000px;
+}
+
+.materials {
+  margin: 55px 0 60px;
+  &__title {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color: var(--black);
+  }
+  &-item {
+    width: 23.5%;
+    height: 78px;
+    padding: 5px 17px 5px 5px;
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    background: var(--bg2);
+    border-radius: 20px;
+    margin-top: 22px;
+    border: 1px solid var(--gray);
+    &:hover {
+      box-shadow: none;
+      border: 4px solid var(--gray);
+    }
+    &__img {
+      width: 65px;
+      object-fit: contain;
+      margin-right: 15px;
+    }
+    &__name {
+      font-size: 18px;
+      line-height: 21px;
+      font-weight: 400;
+      color: var(--dark);
+    }
+    svg path {
+      fill: var(--dark);
     }
   }
 }
@@ -3778,6 +4074,7 @@ button {
               font-weight: 500;
               text-align: center;
               margin-bottom: 30px;
+              color: var(--black);
           }
           .input-box {
               margin-top: 24px;
@@ -3796,7 +4093,7 @@ button {
                   font-size: 16px;
                   line-height: 21px;
                   margin-bottom: 12px;
-                  color: #000;
+                  color: var(--black);
               }
               .show-pass {
                   position: absolute;
@@ -3806,6 +4103,9 @@ button {
                   svg {
                       &:last-child {
                           display: none;
+                      }
+                      path {
+                        fill: var(--black);
                       }
                   }
               }
@@ -3826,7 +4126,7 @@ button {
               width: 100%;
               height: 50px;
               border-radius: 10px;
-              background: #F8F8F8;
+              background: var(--border);
               padding: 0 16px;
               border: 1px solid #F1F1F1;
               font-family: sans-serif;
@@ -3863,7 +4163,7 @@ button {
               text-align: center;
               font-size: 12px;
               font-weight: 500;
-              color: #0009;
+              color: var(--dark);
               margin-top: 20px;
               .register,
               .come-in {
@@ -3903,7 +4203,7 @@ button {
               &__text {
                 font-size: 10px;
                 line-height: 13px;
-                color: #0009;
+                color: var(--dark);
                   a {
                       color: #0094FF;
                       font-weight: 500;
@@ -3914,6 +4214,149 @@ button {
               }
           }
       }
+  }
+}
+
+.popUp-faq {
+  font-family: 'Inter', sans-serif;
+  .popUp-content {
+    width: 609px;
+  }
+&-head {
+  font-weight: 600;
+  svg {
+    margin-right: 5px;
+  }
+  margin-bottom: 34px;
+  color: var(--black);
+}
+&__title {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 600;
+  color: var(--black);
+}
+&__text {
+  margin: 10px 0 15px;
+  color: var(--black);
+}
+&__date {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--black)
+}
+.administration-response {
+  background: var(--gray2);
+  padding: 20px;
+  display: inline-block;
+  min-height: 150px;
+  min-width: 292px;
+  border-radius: 10px;
+  margin-top: 34px;
+  &-head {
+    font-weight: 600;
+    svg {
+      margin-right: 5px;
+    }
+    color: var(--black);
+  }
+  &__text {
+    margin: 10px 0 15px;
+    color: var(--black);
+  }
+  &__date {
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--black)
+  }
+}
+}
+
+.speek-text {
+  min-height: 100vh;
+  &-head {
+    padding: 20px 0;
+    .back-page svg path {
+      fill: var(--black);
+      fill-opacity: var(--icon)
+    }
+    .header-login-active {
+      left: 40%;
+      transform: translateX(-50%);
+      background-image: none;
+    }
+    .play-controls {
+      width: 40px;
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &-body {
+    min-height: 50vh;
+    padding: 100px 0;
+    .speek-text-info {
+      max-width: 734px;
+      font-size: 22px;
+      line-height: 30px;
+      font-weight: 700;
+      color: var(--black);
+      span {
+        font-family: 'Inter';
+        font-weight: 500;
+        color: #0072C6;
+      }
+    }
+  }
+  &-footer {
+    .progressBar {
+      width: 100%;
+      height: 6px;
+      background: #E6E6E6;
+      position: relative;
+      &-step {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        li {
+          width: 4px;
+          height: 100%;
+          background: #fff;
+          cursor: pointer;
+        }
+      }
+      &-active {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: #0094FF;
+        &::after {
+          content: '';
+          width: 4px;
+          height: 10px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background: #0094FF;
+        }
+      }
+    }
+
+    .controls {
+      margin-top: 40px;
+      border-top: 1px solid var(--button);
+      padding: 12px 0;
+      .play-controls {
+        border: none;
+        padding: 0;
+        height: auto;
+        margin: 0;
+      }
+    }
   }
 }
 

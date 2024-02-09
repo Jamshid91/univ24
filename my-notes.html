@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row g-0">
                 <div class="col-12 d-flex align-items-center justify-content-between">
-                    <div class="d-none d-md-flex align-items-center">
+                    <div class="d-none d-lg-flex align-items-center">
                         <a href="./index.html" class="header-logo"></a>
                         <ul class="header-nav d-flex ">
                             <li><a href="./education.html">Обучение</a></li>
@@ -23,11 +23,10 @@
                             <li><a href="./media.html">Медиатека</a></li>
                         </ul>
                     </div>
-                   <div class="d-flex justify-content-between align-items-center">
-                    <a href="./index.html" class="header-logo d-md-none "></a>
-
                     <!-- после активация надо будет убрать класс d-none на  header-login-active -->
-                    <div class="header-login-active d-flex flex-column align-items-end">
+                    <div class="active-login d-none">
+                        <a href="./index.html" class="header-logo position-absolute d-lg-none"></a>
+                        <div class="header-login-active d-flex flex-column align-items-end">
                         <div class="header-login-active-top d-flex align-items-center justify-content-between">
                             <div class="chat-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
@@ -48,7 +47,7 @@
                                         <circle class="circle-anim" mask="url(#mask01)" cx="50" cy="50" r="40" fill="none" stroke="#FF9700" stroke-width="90" stroke-dasharray="150 1000" pathLength="1000" />
                                         </g>
                                     </svg>
-                                    <img src="assets/img/svg/user-white.svg" alt="" class="user-icon">
+                                    <div class="user-icon"></div>
                                 </div>
                                 <span class="d-none d-md-block">Мой кабинет</span>
                             </div>
@@ -138,7 +137,7 @@
                                     </svg>
                                 </div>
                             </a>
-                            <div class="admin-panel-footer d-flex justify-content-between align-items-center">
+                            <div class="admin-panel-footer d-flex justify-content-between align-items-start ">
                                 <div class="header-lang position-relative ">
                                     <div class="header-lang-btn d-flex align-items-center">
                                         <div class="lang-active">ru</div>
@@ -146,24 +145,49 @@
                                             <path d="M11 15.625C10.9097 15.6251 10.8203 15.6074 10.7369 15.5728C10.6535 15.5382 10.5777 15.4875 10.514 15.4236L3.63898 8.54861C3.37034 8.27996 3.37034 7.84495 3.63898 7.57648C3.90762 7.30801 4.34264 7.30784 4.61111 7.57648L11 13.9654L17.389 7.57648C17.6576 7.30784 18.0926 7.30784 18.3611 7.57648C18.6296 7.84512 18.6297 8.28014 18.3611 8.54861L11.4861 15.4236C11.4223 15.4875 11.3466 15.5382 11.2632 15.5728C11.1798 15.6074 11.0903 15.6251 11 15.625Z" fill="#0085FF"/>
                                         </svg>
                                     </div>
-                                    <ul class="header-lang-list position-relative mt-1 d-none">
-                                        <li><a href="#">EN</a></li>
-                                        <li><a href="#">ES</a></li>
-                                        <li><a href="#">RU</a></li>
-                                        <li><a href="#">DE</a></li>
-                                        <li><a href="#">FR</a></li>
-                                        <li><a href="#">IT</a></li>
-                                        <li><a href="#">PT</a></li>
-                                        <li><a href="#">JA</a></li>
-                                        <li><a href="#">ZH</a></li>
-                                        <li><a href="#">PL</a></li>
-                                        <li><a href="#">TR</a></li>
-                                        <li><a href="#">AR</a></li>
-                                        <li><a href="#">FA</a></li>
-                                        <li><a href="#">NL</a></li>
-                                        <li><a href="#">KO</a></li>
-                                        <li><a href="#">CS</a></li>
-                                    </ul>
+                                    <div class="all-language">
+                                      <h6 class="all-language__title">Выбор языка</h6>
+                                      <div class="all-language-item">
+                                        <ul class="all-language-list">
+                                            <li><a href="#">English (<span>EN</span>) </a></li>
+                                            <li><a href="#">Русский (<span>РУ</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                            <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                        </ul>
+                                          <div class="all-language-btn d-flex justify-content-center">
+                                              <svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M9.5 9L0.406735 0.749998L18.5933 0.75L9.5 9Z" fill="#FE7D23"/>
+                                              </svg>
+                                          </div>
+                                      </div>
+        
+                                    </div>
                                 </div>
                                 <div class="header-switch d-flex justify-content-between align-items-center px-1">
                                     <div class="active-switch"></div>
@@ -183,11 +207,10 @@
                             </div>
                         </div>
                     </div>
+                    </div>
 
-                   </div>
-
-                   <!-- после активация надо будет добавить класс d-none на  header-right -->
-                    <div class="header-right d-flex align-items-center flex-row-reverse flex-md-row justify-content-between d-none">
+                    <!-- после активация надо будет добавить класс d-none на  header-right -->
+                    <div class="header-right d-flex align-items-center flex-row-reverse flex-lg-row justify-content-between">
                         <div class="header-login">
                             <div class="header-login-btn d-flex align-items-center">
                                 <div class="login-icon">
@@ -202,12 +225,12 @@
                                         <circle class="circle-anim" mask="url(#mask02)" cx="50" cy="50" r="40" fill="none" stroke="#FF9700" stroke-width="90" stroke-dasharray="150 1000" pathLength="1000" />
                                         </g>
                                     </svg>
-                                    <img src="assets/img/svg/user-white.svg" alt="" class="user-icon">
+                                    <div class="user-icon"></div>
                                 </div>
                                 <span class="d-none d-md-block">Мой кабинет</span>
                             </div>
                         </div>
-                        <!-- <a href="./index.html" class="header-logo d-md-none"></a> -->
+                        <a href="./index.html" class="header-logo d-lg-none"></a>
                         <div class="header-lang position-relative ">
                             <div class="header-lang-btn d-flex align-items-center">
                                 <div class="lang-active">ru</div>
@@ -215,24 +238,49 @@
                                     <path d="M11 15.625C10.9097 15.6251 10.8203 15.6074 10.7369 15.5728C10.6535 15.5382 10.5777 15.4875 10.514 15.4236L3.63898 8.54861C3.37034 8.27996 3.37034 7.84495 3.63898 7.57648C3.90762 7.30801 4.34264 7.30784 4.61111 7.57648L11 13.9654L17.389 7.57648C17.6576 7.30784 18.0926 7.30784 18.3611 7.57648C18.6296 7.84512 18.6297 8.28014 18.3611 8.54861L11.4861 15.4236C11.4223 15.4875 11.3466 15.5382 11.2632 15.5728C11.1798 15.6074 11.0903 15.6251 11 15.625Z" fill="#0085FF"/>
                                 </svg>
                             </div>
-                            <ul class="header-lang-list position-absolute d-none">
-                                <li><a href="#">EN</a></li>
-                                <li><a href="#">ES</a></li>
-                                <li><a href="#">RU</a></li>
-                                <li><a href="#">DE</a></li>
-                                <li><a href="#">FR</a></li>
-                                <li><a href="#">IT</a></li>
-                                <li><a href="#">PT</a></li>
-                                <li><a href="#">JA</a></li>
-                                <li><a href="#">ZH</a></li>
-                                <li><a href="#">PL</a></li>
-                                <li><a href="#">TR</a></li>
-                                <li><a href="#">AR</a></li>
-                                <li><a href="#">FA</a></li>
-                                <li><a href="#">NL</a></li>
-                                <li><a href="#">KO</a></li>
-                                <li><a href="#">CS</a></li>
-                            </ul>
+                            <div class="all-language">
+                              <h6 class="all-language__title">Выбор языка</h6>
+                              <div class="all-language-item">
+                                  <ul class="all-language-list">
+                                      <li><a href="#">English (<span>EN</span>) </a></li>
+                                      <li><a href="#">Русский (<span>РУ</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                      <li><a href="#">Китайский (<span>CH</span>)</a></li>
+                                  </ul>
+                                  <div class="all-language-btn d-flex justify-content-center">
+                                      <svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M9.5 9L0.406735 0.749998L18.5933 0.75L9.5 9Z" fill="#FE7D23"/>
+                                      </svg>
+                                  </div>
+                              </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -300,29 +348,29 @@
         </div>
     </main>
 
-
-
     <footer class="footer">
         <div class="container">
             <div class="row g-0 d-flex align-items-start">
-                <div class="col-md-6">
-                    <div class="d-flex justify-content-between align-items-center ">
-                        <a href="./index.html" class="footer-logo">
-                            <img src="assets/img/svg/logo-footer.svg" alt="">
-                        </a>
-                        <div class="d-md-none  d-flex align-items-center">
-                            <a href="#" class="footer-brend">
-                                <img src="assets/img/svg/brend1.svg" alt="">
+                <div class="col-md-5 pe-0 pe-lg-5">
+                    <div class="pe-0 pe-xl-2 ">
+                        <div class="d-flex justify-content-between align-items-center ">
+                            <a href="./index.html" class="footer-logo">
+                                <img src="assets/img/svg/logo-footer.svg" alt="">
                             </a>
-                            <a href="#" class="footer-brend">
-                                <img src="assets/img/svg/brend2.svg" alt="">
-                            </a>
+                            <div class="d-md-none  d-flex align-items-center">
+                                <a href="#" class="footer-brend">
+                                    <img src="assets/img/svg/brend1.svg" alt="">
+                                </a>
+                                <a href="#" class="footer-brend">
+                                    <img src="assets/img/svg/brend2.svg" alt="">
+                                </a>
+                            </div>
                         </div>
+                        <h3 class="footer__title">Университетский Центр Непрерывного Обучения</h3>
+                        <p class="footer__text">Самые высокие российские и международные стандарты образования.</p>
+                        <p class="footer__text">Лицензия на осуществление  образовательной деятельности <br>
+                            №Л035-01298-77/00184386  выдана Департаментом образования города Москвы (на бланке - 038379) от 26.04.2017</p>
                     </div>
-                    <h3 class="footer__title">Университетский Центр Непрерывного Обучения</h3>
-                    <p class="footer__text">Самые высокие российские и международные стандарты образования.</p>
-                    <p class="footer__text">Лицензия на осуществление  образовательной деятельности <br>
-                        №Л035-01298-77/00184386  выдана Департаментом образования города Москвы (на бланке - 038379) от 26.04.2017</p>
                 </div>
                 <div class="col-lg-3 offset-md-1 pe-lg-5 col-md-3 col-sm-5 col-10 mt-2 mt-md-0">
                     <div class="d-flex justify-content-between">
@@ -352,7 +400,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-2 d-none d-md-block justify-content-end align-items-center">
+                <div class="col-lg-3 col-md-2 d-none d-md-flex justify-content-end align-items-center">
                     <a href="#" class="footer-brend">
                         <img src="assets/img/svg/brend1.svg" alt="">
                     </a>

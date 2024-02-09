@@ -20,3 +20,10 @@ settingsBg.addEventListener('click', () => {
     settingsBox.classList.add('d-none');
     settingsBtn.classList.remove('btnClicked');
 });
+
+const infoFaq_btn = document.querySelector('.sub-info__btn');
+const subInfo = document.querySelector('.sub-info');
+
+infoFaq_btn.addEventListener('click', () => {
+    subInfo.classList.toggle('showSubInfo')
+});

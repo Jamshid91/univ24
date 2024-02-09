@@ -40,3 +40,21 @@ comment = new Swiper('.swiper.tutor-box', {
         },
   }
 });
+
+const tutorBtns = document.querySelectorAll('.tutor__btn'),
+      popUp_chat = document.querySelector('.popUp-chat'),
+      faqViewBtns = document.querySelectorAll('.comment-faq__view'),
+      popUp_faq = document.querySelector('.popUp-faq');
+
+  
+tutorBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    popUp_chat.classList.remove('d-none')
+  })
+});
+
+faqViewBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    popUp_faq.classList.remove('d-none')
+  })
+});

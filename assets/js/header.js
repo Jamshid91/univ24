@@ -1,21 +1,37 @@
 const langActive = document.querySelectorAll('.header-lang-btn'),
-      langs = document.querySelectorAll('.header-lang-list li');
+      langs = document.querySelectorAll('.all-language-list li a'),
+      allLanguageBtn = document.querySelectorAll('.all-language-btn');
 
 
 langActive.forEach(active => {
     active.addEventListener('click', () => {
-        active.nextElementSibling.classList.toggle('d-none')
+        active.parentElement.classList.toggle('showLang')
     });
 })
 
 langs.forEach(lang =>  {
     lang.addEventListener('click', () => {
         langActive.forEach(active => {
-            active.children[0].textContent = lang.textContent;
-            active.nextElementSibling.classList.toggle('d-none');
+            active.children[0].textContent = lang.children[0].textContent;
+            active.parentElement.classList.toggle('showLang');
         })
+        console.log(lang.children[0])
     })
 });
+
+document.addEventListener('click', (function(e) {
+    langActive.forEach(active => {
+       active.parentElement.contains(e.target)||active.parentElement.classList.remove('showLang')
+    
+    })
+}));
+
+allLanguageBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.previousElementSibling.classList.toggle('showAllList');
+        btn.classList.toggle('rortateBtn')
+    })
+})
 
 const circleAnims = document.querySelectorAll('.circle-anim');
       let i = 50;

@@ -542,44 +542,6 @@ button {
   background: rgba(0, 133, 255, 0.14);
 }
 
-.header-lang-list {
-  background: var(--white);
-  top: 108%;
-  left: 0;
-  width: 100%;
-  -webkit-animation: animLang 0.3s linear;
-          animation: animLang 0.3s linear;
-  z-index: 10;
-  max-height: 100px;
-  overflow-y: scroll;
-}
-
-.header-lang-list::-webkit-scrollbar {
-  width: 4px;
-  background: #97a3b5;
-  -webkit-border-radius: 6px;
-          border-radius: 6px;
-}
-
-.header-lang-list::-webkit-scrollbar-thumb {
-  background: #FF9700;
-  -webkit-border-radius: 6px;
-          border-radius: 6px;
-}
-
-.header-lang-list li {
-  margin-top: 4px;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 500;
-  padding-left: 10px;
-  color: var(--dark-light);
-}
-
-.header-lang-list li:hover {
-  color: #0085ff;
-}
-
 .header-lang .all-language {
   position: absolute;
   top: 110%;
@@ -592,6 +554,7 @@ button {
   -webkit-border-radius: 10px;
           border-radius: 10px;
   display: none;
+  z-index: 991;
 }
 
 .header-lang .all-language__title {
@@ -5513,6 +5476,11 @@ button {
 .info-page .slider-btns button.next-btn {
   background: transparent;
   height: 36px;
+}
+
+.info-page .slider-btns button.prev-btn svg,
+.info-page .slider-btns button.next-btn svg {
+  width: 99%;
 }
 
 .info-page .slider-btns button.prev-btn svg path,

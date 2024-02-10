@@ -107,6 +107,7 @@
   --button: #E0EDFF;
   --info: #fff;
   --slider-btn: #15283E;
+  --modul: #f6f6f6;
   --login-bg: url('../img/svg/login-bg.svg');
   --logo: url('../img/svg/logo.svg');
   --service-bg-img: url('../img/png/service-bg.png');
@@ -149,6 +150,7 @@
   --button: #284268;
   --info: #1A1A1A;
   --slider-btn: #C1D4EA;
+  --modul: #131313;
   --login-bg: url('../img/svg/login-bg-dark.svg');
   --logo: url('../img/svg/logo-footer.svg');
   --user: url('../img/svg/user-black.svg');
@@ -3399,7 +3401,7 @@ button {
 }
 
 .course-program .modul-item-info {
-  background: #F6F6F6;
+  background: var(--modul);
   -webkit-transition: .3s all;
   -o-transition: .3s all;
   transition: .3s all;
@@ -3436,7 +3438,7 @@ button {
 .course-program .modul-item-info ul li a {
   font-size: 13px;
   line-height: 17px;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--dark);
   font-weight: 500;
 }
 

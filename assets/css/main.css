@@ -219,10 +219,10 @@ body {
 
 .login-icon svg {
   position: absolute;
-  width: 105%;
-  height: 105%;
-  top: -1px;
-  left: -1px;
+  width: 110%;
+  height: 110%;
+  top: -2px;
+  left: -2px;
 }
 
 .login-icon .user-icon {
@@ -441,6 +441,76 @@ button {
 
 .head-page a:hover svg path {
   fill: #0085ff;
+}
+
+.menu .menu-item {
+  position: absolute;
+  right: 0;
+  top: 140%;
+  width: 221px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.2);
+  padding: 7px;
+  z-index: 99;
+  display: none;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.menu .menu-item::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -5px;
+  right: 10px;
+  background: #fff;
+}
+
+.menu .menu-item__list {
+  width: 48%;
+  height: 31px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  background: #0094FF;
+  color: #fff;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu .menu-item__list:nth-child(1), .menu .menu-item__list:nth-child(2) {
+  margin-bottom: 7px;
+}
+
+.showMenu .menu-item {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .header {
@@ -756,7 +826,6 @@ button {
 }
 
 .header-login-active-top .header-login-btn {
-  padding-right: 20px;
   margin-left: auto;
 }
 
@@ -1109,6 +1178,7 @@ button {
   line-height: 12px;
   font-weight: 500;
   color: var(--dark-light);
+  margin-right: 10px;
 }
 
 .goOut-btn:hover svg path {
@@ -5034,6 +5104,7 @@ button {
 
 .info-page .info-head {
   padding: 7.5px 12px;
+  cursor: pointer;
 }
 
 .info-page .info-head .arrow {
@@ -5123,6 +5194,80 @@ button {
   fill: #fff;
 }
 
+.info-page .info-body {
+  background: var(--modul);
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.info-page .info-body ul {
+  padding: 24px;
+}
+
+.info-page .info-body ul li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-bottom: 18px;
+}
+
+.info-page .info-body ul li:last-child {
+  margin-bottom: 0;
+}
+
+.info-page .info-body ul li a {
+  font-size: 13px;
+  line-height: 17px;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.info-page .info-body ul li .num {
+  min-width: 20px;
+  min-height: 20px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #FF9700;
+  color: var(--white);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 6px;
+  font-size: 10px;
+  line-height: 12px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.info-page .info-body ul li svg {
+  margin-right: 6px;
+}
+
+.info-page .info-body ul li span.title {
+  font-weight: 500;
+  color: #000;
+}
+
 .info-page .info-title {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
@@ -5163,6 +5308,20 @@ button {
   line-height: 17px;
   font-weight: 700;
   color: #fff;
+}
+
+.info-page .showInfo {
+  margin-bottom: 30px;
+}
+
+.info-page .showInfo .info-head .arrow {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.info-page .showInfo .info-body {
+  max-height: 1000px;
 }
 
 .settings-bg {
@@ -5893,8 +6052,7 @@ button {
 }
 
 .speek-text-head .back-page svg path {
-  fill: var(--black);
-  fill-opacity: var(--icon);
+  fill: var(--dark);
 }
 
 .speek-text-head .header-login-active {
@@ -6048,6 +6206,10 @@ button {
 @media (max-width: 991px) {
   .header-right {
     width: 100%;
+  }
+  .header-lang .all-language {
+    width: 300px;
+    right: -230px;
   }
   .service-blog .title__text {
     margin-bottom: 24px;
@@ -6611,6 +6773,12 @@ button {
     line-height: 14px;
     padding-left: 5px;
   }
+  .header-login-active .admin-panel {
+    padding-left: 10px;
+  }
+  .header-lang .all-language {
+    right: -240px;
+  }
   .video-js .vjs-big-play-button {
     width: 42px;
     height: 42px;
@@ -7069,10 +7237,16 @@ button {
   .my-notes .note:nth-child(8) .note__img {
     height: 150px;
   }
+  .header-logo {
+    width: 106px;
+    top: 20px !important;
+  }
   .header-login-btn,
   .login-icon {
     padding-right: 0 !important;
     margin-right: 0 !important;
+    width: 35px;
+    height: 35px;
   }
   .favorites-page {
     padding-bottom: 0;
@@ -7261,8 +7435,6 @@ button {
     margin: 8px 0 30px;
   }
   .info-page .info {
-    -webkit-box-shadow: none;
-            box-shadow: none;
     margin-bottom: 0;
   }
   .info-page .info-head {
@@ -7302,6 +7474,7 @@ button {
   .info-page .info-title {
     font-size: 14px;
     line-height: 19px;
+    width: 75%;
   }
   .info-page .info .play-controls {
     border: none;
@@ -7403,6 +7576,9 @@ button {
   .speek-text-head {
     padding: 20px 0;
   }
+  .speek-text-head .back-page svg {
+    width: 15px;
+  }
   .speek-text-head .header-login-active {
     left: 10%;
   }
@@ -7413,5 +7589,23 @@ button {
   .speek-text-body .speek-text-info {
     font-size: 18px;
     line-height: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-logo {
+    width: 90px;
+    top: 20px !important;
+  }
+  .header-logo {
+    width: 90px !important;
+    top: 20px !important;
+  }
+  .header-login-btn,
+  .login-icon {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    width: 35px;
+    height: 35px;
   }
 }

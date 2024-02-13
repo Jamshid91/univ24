@@ -15,7 +15,6 @@ langs.forEach(lang =>  {
             active.children[0].textContent = lang.children[0].textContent;
             active.parentElement.classList.toggle('showLang');
         })
-        console.log(lang.children[0])
     })
 });
 

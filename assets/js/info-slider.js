@@ -92,3 +92,8 @@ function moveRight() {
     }
 
 }
+
+$('.info-head').click(function() {
+    $(this).parent().siblings().removeClass('showInfo');
+    $(this).parent().toggleClass('showInfo');
+  });

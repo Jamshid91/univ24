@@ -1,6 +1,6 @@
 const body= document.querySelector('body'),
       popUpLogin = document.querySelector('.popUp-login'),
-      login_btn = document.querySelector('.header-login'),
+      login_btn = document.querySelectorAll('.login-regis__btn'),
       formLogin = document.querySelector('.form-login'),
       formRegisterPhone = document.querySelector('.form-registration-phone'),
       formCode = document.querySelector('.form-code'),
@@ -24,12 +24,25 @@ const body= document.querySelector('body'),
       pass1Regis = document.getElementById('pass1-regis'),
       pass2Regis = document.getElementById('pass2-regis'),
       formRegister = document.querySelector('.form-registration'),
+      menuBtn = document.querySelector('.menu_btn'),
+      menuItem = document.querySelector('.menu-item'),
       submitRegister = document.querySelector('.form-registration .form__btn');
 
 
-login_btn.addEventListener('click', () => {
-  popUpLogin.classList.remove('d-none')
+login_btn.forEach(btn => {
+  btn.addEventListener('click', () => {
+    popUpLogin.classList.remove('d-none')
+  });
 });
+
+menuBtn.addEventListener('click', () => {
+  menuBtn.parentElement.classList.toggle('showMenu')
+});
+
+document.addEventListener('click', (function(e) {
+  menuBtn.parentElement.contains(e.target)||menuBtn.parentElement.classList.remove('showMenu')
+}));
+
 
 forgotPassword.addEventListener('click', () => {
   formLogin.classList.add('d-none');

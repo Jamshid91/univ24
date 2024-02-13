@@ -68,6 +68,12 @@
   .header-right {
     width: 100%;
   }
+  .header-lang {
+    .all-language {
+      width: 300px;
+      right: -230px;
+    }
+  }
   .service-blog {
     .title__text {
       margin-bottom: 24px;
@@ -694,6 +700,14 @@
       }
     }
   }
+  .header-login-active .admin-panel {
+    padding-left: 10px;
+  }
+  .header-lang {
+    .all-language {
+      right: -240px;
+    }
+  }
   .video-js {
     .vjs-big-play-button {
       width: 42px;
@@ -1210,10 +1224,16 @@
       }
     }
   }
+  .header-logo {
+    width: 106px;
+    top: 20px !important;
+  }
   .header-login-btn,
   .login-icon {
     padding-right: 0 !important;
     margin-right: 0 !important;
+    width: 35px;
+    height: 35px;
   }
 
   .favorites-page {
@@ -1403,7 +1423,6 @@
     }
 
     .info {
-      box-shadow: none;
       margin-bottom: 0;
       &-head {
         padding: 6px;
@@ -1441,6 +1460,7 @@
       &-title {
         font-size: 14px;
         line-height: 19px;
+        width: 75%;
       }
       .play-controls {
         border: none;
@@ -1549,7 +1569,10 @@
 .speek-text {
   min-height: 100vh;
   &-head {
-    padding: 20px 0;
+    padding: 20px 0;  
+    .back-page svg {
+      width: 15px;
+    }
     .header-login-active {
       left: 10%;
     }
@@ -1563,4 +1586,23 @@
     }
   }
 }
+}
+
+
+@media (max-width: 420px) {
+  .header-logo {
+    width: 90px;
+    top: 20px !important;
+  }
+  .header-logo {
+    width: 90px !important;
+    top: 20px !important;
+  }
+  .header-login-btn,
+  .login-icon {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    width: 35px;
+    height: 35px;
+  }
 }

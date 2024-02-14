@@ -520,10 +520,12 @@ button {
 
 .header-logo {
   margin-right: 40px;
-  width: 148px;
-  height: 45px;
+  width: 125px;
+  height: 26px;
   background-image: var(--logo);
   background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
   -webkit-transition: 1s all;
   -o-transition: 1s all;
   transition: 1s all;
@@ -4301,6 +4303,80 @@ button {
   fill: var(--dark);
 }
 
+.my-notes-in-page .my-note .info-body {
+  background: var(--modul);
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.my-notes-in-page .my-note .info-body ul {
+  padding: 24px;
+}
+
+.my-notes-in-page .my-note .info-body ul li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-bottom: 18px;
+}
+
+.my-notes-in-page .my-note .info-body ul li:last-child {
+  margin-bottom: 0;
+}
+
+.my-notes-in-page .my-note .info-body ul li a {
+  font-size: 13px;
+  line-height: 17px;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.my-notes-in-page .my-note .info-body ul li .num {
+  min-width: 20px;
+  min-height: 20px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #FF9700;
+  color: var(--white);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 6px;
+  font-size: 10px;
+  line-height: 12px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.my-notes-in-page .my-note .info-body ul li svg {
+  margin-right: 6px;
+}
+
+.my-notes-in-page .my-note .info-body ul li span.title {
+  font-weight: 500;
+  color: #000;
+}
+
 .my-notes-in-page .my-note .info {
   min-width: 65px;
 }
@@ -4417,6 +4493,20 @@ button {
   line-height: 17px;
   font-weight: 700;
   color: #fff;
+}
+
+.my-notes-in-page .showInfo {
+  margin-bottom: 30px;
+}
+
+.my-notes-in-page .showInfo .my-note-head .arrow {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.my-notes-in-page .showInfo .info-body {
+  max-height: 1000px;
 }
 
 .my-notes-in-page .my-note-info__text {
@@ -6204,8 +6294,10 @@ button {
 }
 
 @media (max-width: 991px) {
-  .header-right {
-    width: 100%;
+  .header-logo {
+    margin-right: 40px;
+    width: 92px;
+    height: 19px;
   }
   .header-lang .all-language {
     width: 300px;
@@ -6331,6 +6423,14 @@ button {
 }
 
 @media (max-width: 767px) {
+  .header-logo {
+    margin-right: 0;
+    width: 104px;
+    height: 22px;
+  }
+  .header-right {
+    width: 100%;
+  }
   .header-login {
     margin: 0;
   }
@@ -6338,11 +6438,11 @@ button {
     padding-bottom: 40px;
   }
   .active-login .header-logo {
-    top: 25px;
+    top: 35px;
+    z-index: 1000;
   }
-  .header-logo {
-    margin-right: 0;
-    width: 100px;
+  .header-login-active {
+    padding-right: 0;
   }
   .header-login-active-top {
     width: 40% !important;
@@ -6772,6 +6872,15 @@ button {
     font-size: 12px;
     line-height: 14px;
     padding-left: 5px;
+  }
+  .active-login {
+    padding-bottom: 40px;
+  }
+  .active-login .header-logo {
+    top: 30px !important;
+  }
+  .header-login-active {
+    padding-right: 20px;
   }
   .header-login-active .admin-panel {
     padding-left: 10px;
@@ -7262,10 +7371,6 @@ button {
   .my-notes-in-page .head-page {
     margin-bottom: 28px;
   }
-  .my-notes-in-page .my-note {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
   .my-notes-in-page .my-note-head {
     padding: 6px;
   }
@@ -7280,8 +7385,6 @@ button {
     height: 65px;
   }
   .my-notes-in-page .my-note .controls {
-    -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
     -webkit-border-radius: 0 0 20px 20px;
             border-radius: 0 0 20px 20px;
   }

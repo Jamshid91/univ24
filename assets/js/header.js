@@ -38,9 +38,9 @@ const circleAnims = document.querySelectorAll('.circle-anim');
         i= i+2
         circleAnims.forEach(anim => {
             anim.setAttribute('stroke-dasharray', `${i} 1000`);
-            if(i == 1050) {
+            if(i == 1000) {
                 return i = 50;
             }
         })
        
-}, 5);
+}, 25);

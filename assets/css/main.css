@@ -108,6 +108,8 @@
   --info: #fff;
   --slider-btn: #15283E;
   --modul: #f6f6f6;
+  --item: #fff;
+  --border1: #FFE2B7;
   --login-bg: url('../img/svg/login-bg.svg');
   --logo: url('../img/svg/logo.svg');
   --service-bg-img: url('../img/png/service-bg.png');
@@ -151,6 +153,8 @@
   --info: #1A1A1A;
   --slider-btn: #C1D4EA;
   --modul: #131313;
+  --item: #161616;
+  --border1: #161616;
   --login-bg: url('../img/svg/login-bg-dark.svg');
   --logo: url('../img/svg/logo-footer.svg');
   --user: url('../img/svg/user-black.svg');
@@ -3313,7 +3317,7 @@ button {
   font-size: 13px;
   line-height: 17px;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--dark);
 }
 
 .course-program__title {
@@ -3327,7 +3331,7 @@ button {
 .course-program .modul-head {
   -webkit-border-radius: 10px;
           border-radius: 10px;
-  border: 1px solid #FFE2B7;
+  border: 1px solid var(--border1);
   background: rgba(255, 151, 0, 0.15);
   display: -webkit-box;
   display: -webkit-flex;
@@ -3376,9 +3380,9 @@ button {
   padding: 5px 30px 5px 5px;
   -webkit-border-radius: 20px;
           border-radius: 20px;
-  background: var(--white);
+  background: var(--item);
   margin-bottom: 10px;
-  border: 1px solid var(--dark);
+  border: 1px solid var(--item);
   cursor: pointer;
 }
 

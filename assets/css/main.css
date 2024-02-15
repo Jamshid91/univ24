@@ -6420,6 +6420,14 @@ button {
   .speek-text-head .header-login-active {
     left: 30%;
   }
+  .login-icon {
+    width: 41px;
+    height: 41px;
+  }
+  .login-icon .user-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -6856,8 +6864,8 @@ button {
     cursor: pointer;
   }
   .header-lang-btn .lang-active {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     font-size: 12px;
     line-height: 14px;
     margin-right: 6px;
@@ -7693,22 +7701,42 @@ button {
     font-size: 18px;
     line-height: 24px;
   }
+  .header-login-btn,
+  .login-icon {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    width: 30px;
+    height: 30px;
+  }
+  .header-login-btn .user-icon,
+  .login-icon .user-icon {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 @media (max-width: 420px) {
   .header-logo {
-    width: 90px;
-    top: 20px !important;
-  }
-  .header-logo {
-    width: 90px !important;
-    top: 20px !important;
+    width: 88px !important;
+    height: 19px !important;
   }
   .header-login-btn,
   .login-icon {
     padding-right: 0 !important;
     margin-right: 0 !important;
-    width: 35px;
-    height: 35px;
+    width: 28px;
+    height: 28px;
+  }
+  .header-login-btn .user-icon,
+  .login-icon .user-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .header-lang-btn {
+    cursor: pointer;
+  }
+  .header-lang-btn .lang-active {
+    width: 28px;
+    height: 28px;
   }
 }

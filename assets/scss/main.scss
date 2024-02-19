@@ -43,6 +43,9 @@ body {
     height: 110%;
     top: -2px;
     left: -2px;
+    circle:first-child {
+      transition: .3s ease;
+    }
   }
   .user-icon {
     background-image: var(--user);
@@ -4541,6 +4544,7 @@ button {
     }
   }
 }
+
 
 
 @import "./_media";

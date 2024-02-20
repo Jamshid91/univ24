@@ -37,6 +37,7 @@ body {
   overflow: hidden;
   position: relative;
   margin-right: 12px;
+  transition: .3s all;
   svg{
     position: absolute;
     width: 110%;
@@ -342,6 +343,7 @@ button {
         position: relative;
         color: var(--white);
         text-transform: uppercase;
+        transition: .3s all;
         &::before {
           content: "";
           position: absolute;
@@ -694,7 +696,7 @@ button {
         width: 71px;
         height: 31px;
         border-radius: 50px;
-        border: 1px solid #F4F4F4;
+        border: 1px solid var(--border);
         // background: var(--gradient);
         position: relative;
         transition: 1s all;
@@ -750,7 +752,7 @@ button {
 .goOut-btn {
   width: 70px;
   height: 30px;
-  border: 1px solid #F4F4F4;
+  border: 1px solid var(--border);
   background: var(--white);
   border-radius: 8px;
   font-size: 12px;

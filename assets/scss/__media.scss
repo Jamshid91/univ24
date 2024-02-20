@@ -65,11 +65,33 @@
 }
 
 @media (max-width: 991px) {
+  .login-icon {
+    width: 36px;
+    height: 36px;
+    .user-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
   .header {
     &-logo {
       margin-right: 40px;
       width: 92px;
       height: 19px;
+    }
+    &-lang {
+      &-btn {
+        .lang-active {
+          width: 36px;
+          height: 36px;
+          font-size: 14px;
+          line-height: 14px;
+          margin-right: 6px;
+        }
+        svg {
+          width: 16px;
+        }
+      }
     }
   }
 
@@ -221,14 +243,7 @@
     }
   }
 
-.login-icon {
-  width: 41px;
-  height: 41px;
-  .user-icon {
-    width: 20px;
-    height: 20px;
-  }
-}
+
 }
 
 @media (max-width: 767px) {

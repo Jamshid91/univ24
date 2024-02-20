@@ -219,6 +219,9 @@ body {
   overflow: hidden;
   position: relative;
   margin-right: 12px;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
 }
 
 .login-icon svg {
@@ -609,6 +612,9 @@ button {
   position: relative;
   color: var(--white);
   text-transform: uppercase;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
 }
 
 .header-lang-btn .lang-active::before {
@@ -1107,7 +1113,7 @@ button {
   height: 31px;
   -webkit-border-radius: 50px;
           border-radius: 50px;
-  border: 1px solid #F4F4F4;
+  border: 1px solid var(--border);
   position: relative;
   -webkit-transition: 1s all;
   -o-transition: 1s all;
@@ -1182,7 +1188,7 @@ button {
 .goOut-btn {
   width: 70px;
   height: 30px;
-  border: 1px solid #F4F4F4;
+  border: 1px solid var(--border);
   background: var(--white);
   -webkit-border-radius: 8px;
           border-radius: 8px;
@@ -6304,10 +6310,28 @@ button {
 }
 
 @media (max-width: 991px) {
+  .login-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .login-icon .user-icon {
+    width: 20px;
+    height: 20px;
+  }
   .header-logo {
     margin-right: 40px;
     width: 92px;
     height: 19px;
+  }
+  .header-lang-btn .lang-active {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 14px;
+    margin-right: 6px;
+  }
+  .header-lang-btn svg {
+    width: 16px;
   }
   .service-blog .title__text {
     margin-bottom: 24px;
@@ -6425,14 +6449,6 @@ button {
   }
   .speek-text-head .header-login-active {
     left: 30%;
-  }
-  .login-icon {
-    width: 41px;
-    height: 41px;
-  }
-  .login-icon .user-icon {
-    width: 20px;
-    height: 20px;
   }
 }
 

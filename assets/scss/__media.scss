@@ -380,7 +380,7 @@
       }
       .vjs-big-play-button .vjs-icon-placeholder:before {
         content: url(../img/svg/play2.svg) !important;
-        top: 15% !important;
+        top: 10% !important;
         left: 45% !important;
         transform: translate(-40%, -30%) !important;
     }
@@ -396,6 +396,7 @@
     .blog {
       padding: 0;
       margin: 0;
+      box-shadow: none;
     }
     &-blog {
      .media-blog-box {
@@ -763,7 +764,7 @@
 }
 .vjs-big-play-button .vjs-icon-placeholder:before {
     content: url(../img/svg/play2.svg) !important;
-    top: 15% !important;
+    top: 10% !important;
     left: 45% !important;
     transform: translate(-40%, -30%) !important;
 }

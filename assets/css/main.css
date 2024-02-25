@@ -236,12 +236,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.login-icon .icon circle:first-child {
-  -webkit-transition: .3s ease;
-  -o-transition: .3s ease;
-  transition: .3s ease;
-}
-
 ul,
 ol {
   list-style: none;

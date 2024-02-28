@@ -129,6 +129,7 @@
   --faq_png: url('../img/png/faqs.png');
   --bg-get: url('../img/png/doc-bg.png');
   --pr: #fff;
+  --line: #C7C7CC;
 }
 
 :root[date-theme='dark'] {
@@ -172,6 +173,7 @@
   --mix: lighten;
   --pr: #19364C;
   --menu: #1F1F1F;
+  --line: #2b3034;
   --login-bg: url('../img/svg/login-bg-d.svg');
   --logo: url('../img/svg/logo-footer.svg');
   --gif: url('../img/gif/black.gif');
@@ -636,7 +638,7 @@ button {
   position: absolute;
   top: 110%;
   right: 0;
-  background: var(--white);
+  background: var(--menu);
   width: 375px;
   z-index: 60;
   -webkit-animation: animShowLang .3s;
@@ -653,25 +655,26 @@ button {
   color: var(--dark);
   margin-bottom: 6px;
   font-weight: 400;
+  padding: 5px 0 0 10px;
 }
 
 .header-lang .all-language-item {
   -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
           box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
-  background: var(--white);
+  background: var(--menu);
   -webkit-border-radius: 10px;
           border-radius: 10px;
   overflow: hidden;
 }
 
 .header-lang .all-language-list {
-  max-height: 350px;
+  max-height: 358px;
   overflow: hidden;
   padding: 8px 0;
 }
 
 .header-lang .all-language-list li {
-  padding-left: 16px;
+  padding: 0 16px;
 }
 
 .header-lang .all-language-list li a {
@@ -684,7 +687,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   height: 25px;
-  border-bottom: 1px solid var(--gray2);
+  border-bottom: 1px solid var(--line);
   font-size: 11px;
   line-height: 13px;
   color: var(--dark);
@@ -692,6 +695,9 @@ button {
 
 .header-lang .all-language-list li:hover {
   background: var(--gray2);
+}
+.header-lang .all-language-list li:hover a{
+  border-bottom: 1px solid var(--gray2);
 }
 
 .header-lang .all-language-btn {
@@ -710,7 +716,7 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  background: var(--white);
+  background: var(--menu);
   margin-top: 5px;
 }
 
@@ -3858,21 +3864,6 @@ button {
   transition: .3s all;
 }
 
-.my-profile .form-item input::-webkit-input-placeholder {
-  color: var(--input-color);
-}
-
-.my-profile .form-item input:-ms-input-placeholder {
-  color: var(--input-color);
-}
-
-.my-profile .form-item input::-ms-input-placeholder {
-  color: var(--input-color);
-}
-
-.my-profile .form-item input::placeholder {
-  color: var(--input-color);
-}
 
 .my-profile .form-item input:focus {
   border-color: #0085ff;
@@ -6861,7 +6852,7 @@ button {
   .controls .settings-box {
     top: 105%;
     right: 0;
-    width: 100%;
+    width: 350px;
     -webkit-box-shadow: 0px 50px 50px 0px rgba(0, 0, 0, 0.35);
             box-shadow: 0px 50px 50px 0px rgba(0, 0, 0, 0.35);
     padding: 25px 12px;
@@ -6895,7 +6886,7 @@ button {
     padding: 20px 0;
   }
   .speek-text-head .controls {
-    width: 40px;
+    width: 20px;
   }
 }
 

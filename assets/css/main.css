@@ -81,7 +81,7 @@
 
 :root {
   --white: #fff;
-  --white2: #fff;
+  --item: #fff;
   --black: #000;
   --black2: #000;
   --dark: #1e2226;
@@ -134,7 +134,7 @@
 
 :root[date-theme='dark'] {
   --white: #111111;
-  --white2: #131313;
+  --item: #131313;
   --black: #D9DCE1;
   --black2: #fff;
   --dark: #D9DCE1;
@@ -371,7 +371,7 @@ button {
 .blog {
   -webkit-border-radius: 20px;
           border-radius: 20px;
-  background: var(--white2);
+  background: var(--item);
   -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
   padding: 20px 30px;
@@ -1526,7 +1526,7 @@ button {
 }
 
 .service-blog {
-  background: var(--white2);
+  background: var(--item);
   background-image: var(--service-bg-img);
   -webkit-background-size: cover;
           background-size: cover;
@@ -1968,7 +1968,7 @@ button {
   font-size: 8px;
   font-weight: 600;
   line-height: 8px;
-  color: var(--white2);
+  color: var(--item);
   width: 22px;
   height: 22px;
   -webkit-border-radius: 50%;
@@ -2325,7 +2325,7 @@ button {
   padding: 14px 8px;
   -webkit-border-radius: 16px;
           border-radius: 16px;
-  background: var(--white2);
+  background: var(--item);
   -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 12px;
@@ -4002,7 +4002,7 @@ button {
       grid-row-start: 1;
   grid-row-end: 5;
   padding: 16px 19px;
-  background: var(--white);
+  background: var(--item);
   -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
 }
@@ -4031,6 +4031,10 @@ button {
 .my-notes .note:nth-child(2) .note__img {
   margin-top: 16px;
   height: 240px;
+}
+
+.my-notes .note {
+  background: var(--item) !important;
 }
 
 .my-notes .note:nth-child(3) {
@@ -4291,7 +4295,7 @@ button {
           box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 20px;
           border-radius: 20px;
-  background: var(--white);
+  background: var(--item);
   margin-bottom: 10px;
   cursor: pointer;
   margin-bottom: 40px;
@@ -4549,7 +4553,7 @@ button {
   min-height: 446px;
   -webkit-border-radius: 20px;
           border-radius: 20px;
-  background: var(--white);
+  background: var(--item);
   -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
 }
@@ -6268,6 +6272,10 @@ button {
   padding: 0;
   height: auto;
   margin: 0;
+}
+
+.speek-text-footer .controls .play-controls .count {
+  color: var(--text-header);
 }
 
 @media (max-width: 1200px) {

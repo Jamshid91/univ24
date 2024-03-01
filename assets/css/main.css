@@ -1254,6 +1254,7 @@ button {
   font-size: 18px;
   line-height: 24px;
   display: none;
+  border-radius: 10px;
 }
 
 .magazine-blog-info li:nth-child(1), .magazine-blog-info li:nth-child(2), .magazine-blog-info li:nth-child(3) {
@@ -7006,6 +7007,7 @@ button {
   }
   .service-blog-info {
     width: 100%;
+    margin-right: 0;
   }
   .service-blog .read-more {
     width: 100%;

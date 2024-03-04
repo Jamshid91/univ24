@@ -81,7 +81,7 @@
 
 :root {
   --white: #fff;
-  --item: #fff;
+  --item2: #fff;
   --black: #000;
   --black2: #000;
   --dark: #1e2226;
@@ -134,14 +134,14 @@
 
 :root[date-theme='dark'] {
   --white: #111111;
-  --item: #131313;
+  --item2: #1D1D1D;
   --black: #D9DCE1;
   --black2: #fff;
   --dark: #D9DCE1;
   --gray: #121212;
   --gray2: #121212;
   --text-dark: rgba(255, 255, 255, 0.80);
-  --bg-dark: #0D0D0D;
+  --bg-dark: #1D1D1D;
   --service-bg-img: none;
   --education-bg-img: none;
   --bg: #0D0D0D;
@@ -163,7 +163,7 @@
   --info: #1A1A1A;
   --slider-btn: #C1D4EA;
   --modul: #131313;
-  --item: #161616;
+  --item: #131313;
   --border1: #161616;
   --input: #0E0E0E;
   --input-color: #383838;
@@ -3807,7 +3807,7 @@ button {
   width: 48%;
   -webkit-border-radius: 20px;
           border-radius: 20px;
-  background: var(--item);
+  background: var(--item2);
   -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
   padding: 26px 28px 28px 18px;
@@ -3859,10 +3859,13 @@ button {
   padding: 0 16px;
   font-size: 12px;
   line-height: 16px;
-  color: var(--black);
+  color: var(--text-header);
   -webkit-transition: .3s all;
   -o-transition: .3s all;
   transition: .3s all;
+}
+.my-profile .form-item input::placeholder {
+  color: #383838;
 }
 
 

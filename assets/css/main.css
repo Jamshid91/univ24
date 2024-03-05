@@ -86,6 +86,7 @@
   --black2: #000;
   --dark: #1e2226;
   --gray: #fafafa;
+  --li: #fafafa;
   --gray2: #f2f2f2;
   --text-dark: rgba(0, 0, 0, 0.8);
   --bg-dark: #0d1c2d;
@@ -117,6 +118,7 @@
   --view-b: #fff8;
   --mix: normal;
   --menu: #fff;
+  --play: #fff;
   --login-bg: url('../img/svg/login-bg.svg');
   --logo: url('../img/svg/logo.svg');
   --service-bg-img: url('../img/png/service-bg.png');
@@ -133,12 +135,13 @@
 }
 
 :root[date-theme='dark'] {
-  --white: #111111;
+  --white: #0D0D0D;
   --item2: #1D1D1D;
   --black: #D9DCE1;
   --black2: #fff;
   --dark: #D9DCE1;
   --gray: #121212;
+  --li: #2C2C2C;
   --gray2: #121212;
   --text-dark: rgba(255, 255, 255, 0.80);
   --bg-dark: #1D1D1D;
@@ -163,7 +166,7 @@
   --info: #1A1A1A;
   --slider-btn: #C1D4EA;
   --modul: #131313;
-  --item: #131313;
+  --item: #1D1D1D;
   --border1: #161616;
   --input: #0E0E0E;
   --input-color: #383838;
@@ -174,6 +177,7 @@
   --pr: #19364C;
   --menu: #1F1F1F;
   --line: #2b3034;
+  --play: #0D0D0D;
   --login-bg: url('../img/svg/login-bg-d.svg');
   --logo: url('../img/svg/logo-footer.svg');
   --gif: url('../img/gif/black.gif');
@@ -386,7 +390,7 @@ button {
   line-height: 22px;
   font-weight: 600;
   color: #1f5fdb;
-  background: var(--white);
+  background: var(--item);
 }
 
 .more:hover {
@@ -1249,7 +1253,7 @@ button {
 .magazine-blog-info li {
   margin-bottom: 18px;
   padding: 8px;
-  background: var(--gray);
+  background: var(--li);
   color: var(--text-dark);
   font-size: 18px;
   line-height: 24px;
@@ -1471,7 +1475,8 @@ button {
   height: 67px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background: #fff;
+  background: var(--play);
+  border: none;
   position: relative;
   margin: 0 !important;
   -webkit-transform: translate(-50%, -50%);
@@ -1489,8 +1494,10 @@ button {
   height: 83px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background: var(--white) 5;
+  background: var(--item);
+  opacity: var(--play);
   position: absolute;
+  opacity: 0.8;
   top: -9px;
   left: -9px;
 }
@@ -1499,7 +1506,7 @@ button {
   -webkit-transform: translate(-50%, -50%) scale(1.1);
       -ms-transform: translate(-50%, -50%) scale(1.1);
           transform: translate(-50%, -50%) scale(1.1);
-  background: var(--white);
+  background: var(--play);
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;

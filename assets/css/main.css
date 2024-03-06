@@ -119,6 +119,9 @@
   --mix: normal;
   --menu: #fff;
   --play: #fff;
+  --pr: #fff;
+  --line: #C7C7CC;
+  --last: #fff;
   --login-bg: url('../img/svg/login-bg.svg');
   --logo: url('../img/svg/logo.svg');
   --service-bg-img: url('../img/png/service-bg.png');
@@ -130,8 +133,10 @@
   --png4: url('../img/png/l4.png');
   --faq_png: url('../img/png/faqs.png');
   --bg-get: url('../img/png/doc-bg.png');
-  --pr: #fff;
-  --line: #C7C7CC;
+  --img1: url('../img/png/st1.png');
+  --img2: url('../img/png/st2.png');
+  --img3: url('../img/png/st3.png');
+  --img4: url('../img/png/st4.png');
 }
 
 :root[date-theme='dark'] {
@@ -178,6 +183,7 @@
   --menu: #1F1F1F;
   --line: #2b3034;
   --play: #0D0D0D;
+  --last: #2b3034;
   --login-bg: url('../img/svg/login-bg-d.svg');
   --logo: url('../img/svg/logo-footer.svg');
   --gif: url('../img/gif/black.gif');
@@ -187,6 +193,10 @@
   --png4: url('../img/png/l4.1.png');
   --faq_png: url('../img/png/faqs1.png');
   --bg-get: url('../img/png/doc-bg2.png');
+  --img1: url('../img/png/l1.1.png');
+  --img2: url('../img/png/l2.1.png');
+  --img3: url('../img/png/l3.1.png');
+  --img4: url('../img/png/l4.1.png');
 }
 
 *,
@@ -469,7 +479,7 @@ button {
   width: 221px;
   -webkit-border-radius: 10px;
           border-radius: 10px;
-  background: var(--menu);
+  background: var(--last);
   -webkit-box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.2);
           box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.2);
   padding: 7px;
@@ -493,7 +503,7 @@ button {
           transform: rotate(45deg);
   top: -5px;
   right: 10px;
-  background: var(--menu);
+  background: var(--last);
 }
 
 .menu .menu-item__list {
@@ -1475,7 +1485,7 @@ button {
   height: 67px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background: var(--play);
+  background: #fff;
   border: none;
   position: relative;
   margin: 0 !important;
@@ -1494,19 +1504,24 @@ button {
   height: 83px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background: var(--item);
-  opacity: var(--play);
+  background: #fff;
   position: absolute;
   opacity: 0.8;
   top: -9px;
   left: -9px;
 }
 
+.service-blog-card .video-js .vjs-big-play-button {
+  background: var(--play);
+}
+.service-blog-card .video-js .vjs-big-play-button::before {
+  background: var(--play);
+}
+
 .video-js:hover .vjs-big-play-button {
   -webkit-transform: translate(-50%, -50%) scale(1.1);
       -ms-transform: translate(-50%, -50%) scale(1.1);
           transform: translate(-50%, -50%) scale(1.1);
-  background: var(--play);
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
@@ -3772,6 +3787,18 @@ button {
   position: relative;
   padding: 12px;
   margin-bottom: 24px;
+  background-image: var(--img1);
+  background-size: cover;
+  background-position: left;
+}
+.my-course-page .select-doc:nth-child(2) {
+  background-image: var(--img2);
+}
+.my-course-page .select-doc:nth-child(3) {
+  background-image: var(--img3);
+}
+.my-course-page .select-doc:nth-child(4) {
+  background-image: var(--img4);
 }
 
 .my-course-page .select-doc img {
@@ -3872,7 +3899,7 @@ button {
   transition: .3s all;
 }
 .my-profile .form-item input::placeholder {
-  color: #383838;
+  color: #ccc;
 }
 
 
@@ -5789,6 +5816,9 @@ button {
 .sub-info__btn {
   cursor: pointer;
 }
+.sub-info__btn svg {
+  margin-left: 4px;
+}
 
 .sub-info__btn:hover {
   opacity: 0.8;
@@ -7011,6 +7041,7 @@ button {
             box-shadow: none;
     padding: 0;
     margin-bottom: 30px;
+    background: none;
   }
   .education-blog-card {
     width: 100%;
